@@ -1,11 +1,8 @@
-server:
-  port: 9999
-  context-path: /cr
-  
+
 spring:
-  datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@//127.0.0.1:1521/helowin
-    username: BRDB_TJSP_0329
-    password: cnbi2018
-    
+  profiles:
+    active:
+    - com
+  
+mybatis:  mapper-locations: 
+    - classpath:/mybatis/*.xml ##对所有xml文件进行扫描   --如果mapper和xml放在同一个目录保持同名，扫描一个包即可

@@ -35,6 +35,17 @@
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
 		    <version>2.0.1</version>
 		</dependency>
+		<!-- 对java api的支持（JDBC等）-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            </dependency>
+            <!-- 加载oracle数据库驱动包 -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
 	</dependencies>
 
 	
