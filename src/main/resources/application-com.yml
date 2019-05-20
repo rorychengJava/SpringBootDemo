@@ -1,0 +1,10 @@
+server:
+  port: 9999
+  
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@//192.168.2.201:1521/orcl
+    username: BRDB_TJSP_0304
+    password: cnbi2018
+    

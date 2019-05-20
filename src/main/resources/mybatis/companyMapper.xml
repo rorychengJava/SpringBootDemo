@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
 <mapper namespace="com.SpringBootDemo.mapper.CompanyMapper">
-
-  	<select id="findCompanyById" parameterType="String" resultType="com.SpringBootDemo.util.CompanyInfo">
+	
+	<!-- 根据公司 scode 进行查询公司信息 -->
+  	<select id="findCompanyById" parameterType="String" resultType="CompanyInfo">
   	select scode,sname,nlevel from dw_dimcompany where scode=#{scode}
   	</select>
   	
