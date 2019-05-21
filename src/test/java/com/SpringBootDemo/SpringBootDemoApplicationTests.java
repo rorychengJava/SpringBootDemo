@@ -24,8 +24,6 @@ public class SpringBootDemoApplicationTests {
 		for (CompanyInfo companyInfo : list) {
 			System.out.println(companyInfo.getScode());
 		}
-		
-		
 	}
 
 }

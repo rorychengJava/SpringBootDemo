@@ -1,11 +1,11 @@
 server:
   port: 9999
-  context-path: /cr
   
-spring:
-  datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@//127.0.0.1:1521/helowin
-    username: BRDB_TJSP_0329
-    password: cnbi2018
+  
+#spring:
+#  datasource:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@//127.0.0.1:1521/helowin
+#    username: BRDB_TJSP_0329
+#    password: cnbi2018
     
