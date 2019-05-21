@@ -7,5 +7,12 @@
   	select scode,sname,nlevel from dw_dimcompany where scode=#{scode}
   	</select>
   	
+  	<!-- 根据用户名查找关联公司信息 -->
+  	<select id = "findCompanyInfo" parameterType="java.lang.String" resultType="Map">
+      select b.scode as id,'('||b.scode||')'||b.SNAME as text,b.sname,b.SPCODE,b.SFULLNAME,b.NISLEAF,b.PROPERTY1,b.SEASCOMCODE,b.STYPE,b.SINDCODE,b.SSRCCODE,b.NLEVEL from
+      (select * from SYS_USER where suser = #{suser} and CISENABLED = 'Y') a left JOIN
+      dw_dimcompany b on a.company = b.scode order by b.scode desc
+    </select>
+  	
   	
 </mapper>
