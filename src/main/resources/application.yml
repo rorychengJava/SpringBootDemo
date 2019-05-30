@@ -2,8 +2,8 @@
 spring:
   profiles:
     active:
-    - com
+    - home
   
 mybatis:
   config-location: classpath:config/mybatis-config.xml   ##扫描mybatis配置文件  mapper-locations: 
-    - classpath:/mybatis/*.xml ##对所有xml文件进行扫描   --如果mapper和xml放在同一个目录保持同名，扫描一个包即可
+    - classpath:/mybatis/*.xml ##对所有xml文件进行扫描   --如果mapper和xml放在同一个目录保持同名，扫描一个包即可    
