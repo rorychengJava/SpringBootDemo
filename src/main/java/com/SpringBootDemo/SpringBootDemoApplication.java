@@ -11,15 +11,15 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.SpringBootDemo")
 @MapperScan("com.SpringBootDemo.mapper.*")
 
-/*public class SpringBootDemoApplication {
+public class SpringBootDemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoApplication.class, args);
 	}
 
-}*/
+}
 
-	public class SpringBootDemoApplication extends SpringBootServletInitializer{
+/*	public class SpringBootDemoApplication extends SpringBootServletInitializer{
 		
 		protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 			return builder.sources(SpringBootDemoApplication.class);
@@ -28,4 +28,4 @@ import org.springframework.context.annotation.ComponentScan;
 			SpringApplication.run(SpringBootDemoApplication.class, args);
 		}
 	
-}
+}*/
