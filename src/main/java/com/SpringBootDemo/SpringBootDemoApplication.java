@@ -8,7 +8,8 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.SpringBootDemo")
+//@ComponentScan("com.SpringBootDemo.controller.LogbackController")
+//@ComponentScan("com.SpringBootDemo")
 @MapperScan("com.SpringBootDemo.mapper.*")
 
 public class SpringBootDemoApplication {
