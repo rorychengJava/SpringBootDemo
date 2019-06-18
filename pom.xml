@@ -51,6 +51,13 @@
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 		</dependency>
+		<!-- pagehelper分页 -->
+			<dependency>
+			    <groupId>com.github.pagehelper</groupId>
+			    <artifactId>pagehelper-spring-boot-starter</artifactId>
+			    <version>1.2.10</version>
+			</dependency>
+		
 		<!-- 邮件mail -->
 		<dependency>  
 	    <groupId>org.springframework.boot</groupId>
