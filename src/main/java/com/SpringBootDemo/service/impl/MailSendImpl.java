@@ -1,9 +1,12 @@
 package com.SpringBootDemo.service.impl;
 
+import java.io.File;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMailMessage;
@@ -33,8 +36,8 @@ public class MailSendImpl implements MailSend{
 		mailSender.send(smm);
 		
 	}
-//发送带有模板的邮件
-	public void MineSend(String To, String subject, String Text) {
+//发送带附件的邮件
+	public void MineSend(String To, String subject,String text,File file) {
 		MimeMessage mmm=mailSender.createMimeMessage();
 		
         try {
@@ -42,7 +45,12 @@ public class MailSendImpl implements MailSend{
 			mimeMessageHelper.setFrom(mp.getUsername());
 			mimeMessageHelper.setTo(To);
 	        mimeMessageHelper.setSubject(subject);
-	        mimeMessageHelper.setText("src/main/resources/static/mail.html", true);
+	        mimeMessageHelper.setText(text);
+	        
+	        FileSystemResource f=new FileSystemResource(file);
+	        
+	        mimeMessageHelper.addAttachment("附件", f);
+	        
 	        mailSender.send(mmm);
 		} catch (MessagingException e) {
 			e.printStackTrace();
