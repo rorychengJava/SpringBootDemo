@@ -2,7 +2,14 @@
 spring:
   profiles:
     active:
-    - com
+    - home
+#  redis:#    host: 10.211.55.5
+#    port: 6379
+#    password: 123456
+#    pool:#      max-active: 8
+#      max-idle: 8
+#      max-wait: 0
+#      min-idle: -1
    
    # 设置邮箱主机   mail:#    host: smtp.qq.com
 #    username: 1032377347@qq.com
@@ -16,10 +23,14 @@ spring:
           auth: true
           starttls:
             enable: false
-            required: false      
+            required: false#文件上传 
+#  http:#    multipart:#      max-file-size: 10M
+#      max-request-size: 10M       
   
 mybatis:
   config-location: classpath:config/mybatis-config.xml   ##扫描mybatis配置文件  mapper-locations: 
     - classpath:/mybatis/*.xml ##对所有xml文件进行扫描   --如果mapper和xml放在同一个目录保持同名，扫描一个包即可logging:  config: classpath:logback.xml
+  
+ 
   
 

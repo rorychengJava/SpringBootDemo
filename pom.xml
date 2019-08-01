@@ -7,7 +7,6 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.21.RELEASE</version>
 	</parent>
-
 	<groupId>com</groupId>
 	<artifactId>SpringBootDemo</artifactId>
 	<name>SpringBootDemo</name>
@@ -34,10 +33,15 @@
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
 		    <version>2.0.1</version>
 		</dependency>
+		<!-- SpringBoot整合redis -->
+		    <dependency>
+           		<groupId>org.springframework.boot</groupId>
+           		<artifactId>spring-boot-starter-data-redis</artifactId>
+       		</dependency>
 		<!-- 对java api的支持（JDBC等）-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        	<dependency>
+            	<groupId>org.springframework.boot</groupId>
+            	<artifactId>spring-boot-starter-data-jpa</artifactId>
             </dependency>
 		<!-- 加载oracle数据库驱动包 -->
         <dependency>
@@ -45,6 +49,11 @@
             <artifactId>ojdbc6</artifactId>
             <version>11.2.0.3</version>
         </dependency>
+        <!-- mysql -->
+        <dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		</dependency>
         <!-- 热部署 -->
         <dependency>
 	        <groupId>org.springframework.boot</groupId>
@@ -57,12 +66,42 @@
 			    <artifactId>pagehelper-spring-boot-starter</artifactId>
 			    <version>1.2.10</version>
 			</dependency>
+		<!-- redis -->
+			<dependency>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-starter-data-redis</artifactId>
+			</dependency>
 		
 		<!-- 邮件mail -->
 		<dependency>  
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
+		<!-- thymeleaf模板引擎 -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- 测试相关包-->
+<!-- 		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-test</artifactId>
+		    <scope>test</scope>
+		</dependency> -->
+<!-- 		<dependency>
+         		<groupId>org.springframework</groupId>
+            	<artifactId>spring-test</artifactId>
+	    </dependency> -->
+<!-- 	    <dependency>
+	         <groupId>org.springframework.boot</groupId>
+	         <artifactId>spring-boot-test</artifactId>
+	     </dependency> -->
+		<!-- junit -->
+<!-- 		<dependency> 
+			<groupId>junit</groupId> 
+			<artifactId>junit</artifactId> 
+			<scope>test</scope> 
+		</dependency>  -->
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

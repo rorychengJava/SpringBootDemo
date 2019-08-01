@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.SpringBootDemo.mapper.FindProductMapper">
+
+	<!-- 使用pagehelper分页查询 -->
+	<select id="findAll" resultType="com.SpringBootDemo.util.Products">
+		select * from products
+	</select>
+
+</mapper>
